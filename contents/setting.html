@@ -6,12 +6,20 @@
 -->
 <div>
   <div class="block">
-    <label class="kintoneplugin-label">
-        <span id ="container_label">Sample</span>
-    </label><br >
-    <div class="kintoneplugin-desc">Choose a text</div>
-    <div class="kintoneplugin-input-outer">
-      <input class="kintoneplugin-input-text" type="text">
+    <div class="kintoneplugin-label">
+        <span id ="container_label">slack連携設定画面</span>
     </div>
+    <div class="kintoneplugin-desc">slackとの連携に必要な各情報を入力してください。</div>
+
+    <div class="kintoneplugin-title">API token</div>
+    <div class="kintoneplugin-input-outer">
+      <input class="kintoneplugin-input-text" type="text" id="apitoken">
+    </div>
+    <div class="block">
+      <button type="button" id="submit" class="kintoneplugin-button-dialog-ok">保存する</button>
+      <button type="button" id="cancel" class="kintoneplugin-button-dialog-cancel">キャンセル</button>
+    </div>
+
+
 　</div>
 </div>
