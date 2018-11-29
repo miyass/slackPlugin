@@ -6,20 +6,19 @@
  */
 jQuery.noConflict();
 (function($, PLUGIN_ID) {
-    'use strict';
+  'use strict';
 
-    $('#submit').click(function() {
-      var apitoken = $('#apitoken').val();
-      var headers = {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " + apitoken
-      };
-      console.log(headers);
-      kintone.plugin.app.setProxyConfig('https://slack.com/api/chat.postMessage', "POST", headers, {});
-    })
+  $('#submit').on('click', function() {
+    var apitoken = $('#apitoken').val();
+    var headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + apitoken
+    };
+    kintone.plugin.app.setProxyConfig('https://slack.com/api/chat.postMessage', 'POST', headers, {});
+  });
 
-    $('#cancel').click(function() {
-      history.back()
-    });
+  $('#cancel').click(function() {
+    history.back();
+  });
 
 })(jQuery, kintone.$PLUGIN_ID);
